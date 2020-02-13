@@ -28,7 +28,18 @@ class HomeController: UITableViewController {
         }
     }
     
-    var data: [People] = []
+    var _data: [People]?
+    
+    var data : [People] {
+        get {
+            return _data!
+        }
+        
+        set {
+            _data = newValue
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,17 +98,18 @@ extension HomeController: UISearchBarDelegate {
         
         request = AF.request("https://swapi.co/api/people/?search=\(query)", method: .get)
             .responseObject { (response: AFDataResponse<PeopleResponse>) in
-                let peopleResponse = try? response.result.get()
-
-                self.data.removeAll()
-                if let results = peopleResponse?.results {
-                    for result in results {
-                        self.data.append(result)
+                switch response.result {
+                case .success(let peopleResponse):
+                    self.data.removeAll()
+                    if let results = peopleResponse.results {
+                        self.data = results
                     }
-                    
-                    self.searchBar.isLoading = false
-                    self.tableView.reloadData()
+                case .failure(let error):
+                    let alert = UIAlertController(title: "Error!", message: error.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
+                self.searchBar.isLoading = false
         }
     }
 }

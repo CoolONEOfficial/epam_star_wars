@@ -13,9 +13,7 @@ class PeopleResponse: Mappable {
     var count: Int?
     var results: [People]?
     
-    required init?(map: Map){
-
-    }
+    required init?(map: Map){ }
     
     func mapping(map: Map) {
         count <- map["count"]
@@ -23,18 +21,26 @@ class PeopleResponse: Mappable {
     }
 }
 
-class People: Mappable {
+class People: Mappable, Codable {
     var name: String?
     var height: String?
-    var weight: String?
+    var mass: String?
+    var eyeColor: String?
+    var birthYear: String?
+    var gender: String?
+    var hairColor: String?
+    var skinColor: String?
     
-    required init?(map: Map){
-
-    }
+    required init?(map: Map){ }
     
     func mapping(map: Map) {
         name <- map["name"]
         height <- map["height"]
-        weight <- map["weight"]
+        mass <- map["mass"]
+        eyeColor <- map["eye_color"]
+        birthYear <- map["birth_year"]
+        gender <- map["gender"]
+        hairColor <- map["hair_color"]
+        skinColor <- map["skin_color"]
     }
 }

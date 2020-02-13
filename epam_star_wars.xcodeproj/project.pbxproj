@@ -17,12 +17,13 @@
 		85E1D8E923F467C400E62904 /* epam_star_warsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D8E823F467C400E62904 /* epam_star_warsUITests.swift */; };
 		85E1D8F823F475BA00E62904 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D8F723F475BA00E62904 /* Alamofire.framework */; };
 		85E1D8F923F475BA00E62904 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D8F723F475BA00E62904 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		85E1D8FC23F47C8E00E62904 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D8FB23F47C8E00E62904 /* TableViewCell.swift */; };
 		85E1D8FE23F48E8B00E62904 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D8FD23F48E8B00E62904 /* ObjectMapper.framework */; };
 		85E1D8FF23F48E8B00E62904 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D8FD23F48E8B00E62904 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85E1D90123F4908F00E62904 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D90023F4908F00E62904 /* Models.swift */; };
 		85E1D90323F4977B00E62904 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D90223F4977B00E62904 /* AlamofireObjectMapper.framework */; };
 		85E1D90423F4977B00E62904 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D90223F4977B00E62904 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85E1D90623F5693300E62904 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D90523F5693300E62904 /* Prefs.swift */; };
+		85E1D90823F56B3200E62904 /* PeopleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D90723F56B3200E62904 /* PeopleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +75,11 @@
 		85E1D8E823F467C400E62904 /* epam_star_warsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = epam_star_warsUITests.swift; sourceTree = "<group>"; };
 		85E1D8EA23F467C400E62904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85E1D8F723F475BA00E62904 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		85E1D8FB23F47C8E00E62904 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		85E1D8FD23F48E8B00E62904 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		85E1D90023F4908F00E62904 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		85E1D90223F4977B00E62904 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		85E1D90523F5693300E62904 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		85E1D90723F56B3200E62904 /* PeopleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +137,9 @@
 				85E1D8C623F467C300E62904 /* AppDelegate.swift */,
 				85E1D8C823F467C300E62904 /* SceneDelegate.swift */,
 				85E1D8CA23F467C300E62904 /* HomeController.swift */,
+				85E1D90723F56B3200E62904 /* PeopleController.swift */,
+				85E1D90523F5693300E62904 /* Prefs.swift */,
 				85E1D90023F4908F00E62904 /* Models.swift */,
-				85E1D8FB23F47C8E00E62904 /* TableViewCell.swift */,
 				85E1D8CC23F467C300E62904 /* Main.storyboard */,
 				85E1D8CF23F467C400E62904 /* Assets.xcassets */,
 				85E1D8D123F467C400E62904 /* LaunchScreen.storyboard */,
@@ -305,8 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E1D90623F5693300E62904 /* Prefs.swift in Sources */,
 				85E1D8CB23F467C300E62904 /* HomeController.swift in Sources */,
-				85E1D8FC23F47C8E00E62904 /* TableViewCell.swift in Sources */,
+				85E1D90823F56B3200E62904 /* PeopleController.swift in Sources */,
 				85E1D8C723F467C300E62904 /* AppDelegate.swift in Sources */,
 				85E1D8C923F467C300E62904 /* SceneDelegate.swift in Sources */,
 				85E1D90123F4908F00E62904 /* Models.swift in Sources */,

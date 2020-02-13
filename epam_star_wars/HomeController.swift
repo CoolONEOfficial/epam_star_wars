@@ -14,13 +14,26 @@ class HomeController: UITableViewController {
 
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var testTable: UITableView!
-    var spinnerWrapperView: UIView?
     
-    var data = [String]()
+    var _request: DataRequest?
+    var request: DataRequest? {
+        get {
+            return _request!
+        }
+        set {
+            if let prevRequest = _request {
+                prevRequest.cancel()
+            }
+            _request = newValue
+        }
+    }
+    
+    var data: [People] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        data = Prefs.recents
         
         searchBar.delegate = self
     }
@@ -35,9 +48,23 @@ class HomeController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-       cell.textLabel?.text = self.data[indexPath.row]
-       return cell
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+        let model = self.data[indexPath.row]
+        cell.textLabel?.text = model.name
+        cell.detailTextLabel?.text = "Character"
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "infoSegue", sender: data[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "infoSegue" {
+            if let peopleController = segue.destination as? PeopleController {
+                peopleController.startModel = sender as? People
+            }
+        }
     }
 }
 
@@ -46,27 +73,26 @@ extension HomeController: UISearchBarDelegate {
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.reload(_:)), object: searchBar)
         perform(#selector(self.reload(_:)), with: searchBar, afterDelay: 0.75)
     }
-
+    
     @objc func reload(_ searchBar: UISearchBar) {
         guard let query = searchBar.text, query.trimmingCharacters(in: .whitespaces) != "" else {
             print("nothing to search")
+            request = nil
             self.searchBar.isLoading = false
-            self.data.removeAll()
+            self.data = Prefs.recents
             return
         }
         
         self.searchBar.isLoading = true
         
-        AF.request("https://swapi.co/api/people/?search=\(query)", method: .get)
+        request = AF.request("https://swapi.co/api/people/?search=\(query)", method: .get)
             .responseObject { (response: AFDataResponse<PeopleResponse>) in
                 let peopleResponse = try? response.result.get()
 
                 self.data.removeAll()
                 if let results = peopleResponse?.results {
                     for result in results {
-                        if let name = result.name {
-                            self.data.append(name)
-                        }
+                        self.data.append(result)
                     }
                     
                     self.searchBar.isLoading = false
@@ -99,7 +125,7 @@ extension UISearchBar {
         } set {
             if newValue {
                 if activityIndicator == nil {
-                    let newActivityIndicator = UIActivityIndicatorView(style: .gray)
+                    let newActivityIndicator = UIActivityIndicatorView(style: .medium)
                     newActivityIndicator.startAnimating()
                     if #available(iOS 13.0, *) {
                         newActivityIndicator.backgroundColor = UIColor.systemGroupedBackground

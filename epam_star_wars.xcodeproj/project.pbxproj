@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85E1D8C723F467C300E62904 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D8C623F467C300E62904 /* AppDelegate.swift */; };
+		85E1D8C923F467C300E62904 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D8C823F467C300E62904 /* SceneDelegate.swift */; };
+		85E1D8CB23F467C300E62904 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D8CA23F467C300E62904 /* HomeController.swift */; };
+		85E1D8CE23F467C300E62904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E1D8CC23F467C300E62904 /* Main.storyboard */; };
+		85E1D8D023F467C400E62904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E1D8CF23F467C400E62904 /* Assets.xcassets */; };
+		85E1D8D323F467C400E62904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E1D8D123F467C400E62904 /* LaunchScreen.storyboard */; };
+		85E1D8DE23F467C400E62904 /* epam_star_warsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D8DD23F467C400E62904 /* epam_star_warsTests.swift */; };
+		85E1D8E923F467C400E62904 /* epam_star_warsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D8E823F467C400E62904 /* epam_star_warsUITests.swift */; };
+		85E1D8F823F475BA00E62904 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D8F723F475BA00E62904 /* Alamofire.framework */; };
+		85E1D8F923F475BA00E62904 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D8F723F475BA00E62904 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85E1D8FC23F47C8E00E62904 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D8FB23F47C8E00E62904 /* TableViewCell.swift */; };
+		85E1D8FE23F48E8B00E62904 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D8FD23F48E8B00E62904 /* ObjectMapper.framework */; };
+		85E1D8FF23F48E8B00E62904 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D8FD23F48E8B00E62904 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85E1D90123F4908F00E62904 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D90023F4908F00E62904 /* Models.swift */; };
+		85E1D90323F4977B00E62904 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D90223F4977B00E62904 /* AlamofireObjectMapper.framework */; };
+		85E1D90423F4977B00E62904 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85E1D90223F4977B00E62904 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85E1D8DA23F467C400E62904 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85E1D8BB23F467C300E62904 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85E1D8C223F467C300E62904;
+			remoteInfo = epam_star_wars;
+		};
+		85E1D8E523F467C400E62904 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85E1D8BB23F467C300E62904 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85E1D8C223F467C300E62904;
+			remoteInfo = epam_star_wars;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85E1D8FA23F475BA00E62904 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				85E1D8FF23F48E8B00E62904 /* ObjectMapper.framework in Embed Frameworks */,
+				85E1D90423F4977B00E62904 /* AlamofireObjectMapper.framework in Embed Frameworks */,
+				85E1D8F923F475BA00E62904 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		85E1D8C323F467C300E62904 /* epam_star_wars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = epam_star_wars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E1D8C623F467C300E62904 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85E1D8C823F467C300E62904 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		85E1D8CA23F467C300E62904 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		85E1D8CD23F467C300E62904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85E1D8CF23F467C400E62904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85E1D8D223F467C400E62904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		85E1D8D423F467C400E62904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E1D8D923F467C400E62904 /* epam_star_warsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = epam_star_warsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E1D8DD23F467C400E62904 /* epam_star_warsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = epam_star_warsTests.swift; sourceTree = "<group>"; };
+		85E1D8DF23F467C400E62904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E1D8E423F467C400E62904 /* epam_star_warsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = epam_star_warsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E1D8E823F467C400E62904 /* epam_star_warsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = epam_star_warsUITests.swift; sourceTree = "<group>"; };
+		85E1D8EA23F467C400E62904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85E1D8F723F475BA00E62904 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		85E1D8FB23F47C8E00E62904 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		85E1D8FD23F48E8B00E62904 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		85E1D90023F4908F00E62904 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		85E1D90223F4977B00E62904 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85E1D8C023F467C300E62904 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E1D8FE23F48E8B00E62904 /* ObjectMapper.framework in Frameworks */,
+				85E1D90323F4977B00E62904 /* AlamofireObjectMapper.framework in Frameworks */,
+				85E1D8F823F475BA00E62904 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E1D8D623F467C400E62904 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E1D8E123F467C400E62904 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85E1D8BA23F467C300E62904 = {
+			isa = PBXGroup;
+			children = (
+				85E1D8C523F467C300E62904 /* epam_star_wars */,
+				85E1D8DC23F467C400E62904 /* epam_star_warsTests */,
+				85E1D8E723F467C400E62904 /* epam_star_warsUITests */,
+				85E1D8C423F467C300E62904 /* Products */,
+				85E1D8F623F475BA00E62904 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		85E1D8C423F467C300E62904 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85E1D8C323F467C300E62904 /* epam_star_wars.app */,
+				85E1D8D923F467C400E62904 /* epam_star_warsTests.xctest */,
+				85E1D8E423F467C400E62904 /* epam_star_warsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85E1D8C523F467C300E62904 /* epam_star_wars */ = {
+			isa = PBXGroup;
+			children = (
+				85E1D8C623F467C300E62904 /* AppDelegate.swift */,
+				85E1D8C823F467C300E62904 /* SceneDelegate.swift */,
+				85E1D8CA23F467C300E62904 /* HomeController.swift */,
+				85E1D90023F4908F00E62904 /* Models.swift */,
+				85E1D8FB23F47C8E00E62904 /* TableViewCell.swift */,
+				85E1D8CC23F467C300E62904 /* Main.storyboard */,
+				85E1D8CF23F467C400E62904 /* Assets.xcassets */,
+				85E1D8D123F467C400E62904 /* LaunchScreen.storyboard */,
+				85E1D8D423F467C400E62904 /* Info.plist */,
+			);
+			path = epam_star_wars;
+			sourceTree = "<group>";
+		};
+		85E1D8DC23F467C400E62904 /* epam_star_warsTests */ = {
+			isa = PBXGroup;
+			children = (
+				85E1D8DD23F467C400E62904 /* epam_star_warsTests.swift */,
+				85E1D8DF23F467C400E62904 /* Info.plist */,
+			);
+			path = epam_star_warsTests;
+			sourceTree = "<group>";
+		};
+		85E1D8E723F467C400E62904 /* epam_star_warsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				85E1D8E823F467C400E62904 /* epam_star_warsUITests.swift */,
+				85E1D8EA23F467C400E62904 /* Info.plist */,
+			);
+			path = epam_star_warsUITests;
+			sourceTree = "<group>";
+		};
+		85E1D8F623F475BA00E62904 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85E1D90223F4977B00E62904 /* AlamofireObjectMapper.framework */,
+				85E1D8FD23F48E8B00E62904 /* ObjectMapper.framework */,
+				85E1D8F723F475BA00E62904 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85E1D8C223F467C300E62904 /* epam_star_wars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E1D8ED23F467C400E62904 /* Build configuration list for PBXNativeTarget "epam_star_wars" */;
+			buildPhases = (
+				85E1D8BF23F467C300E62904 /* Sources */,
+				85E1D8C023F467C300E62904 /* Frameworks */,
+				85E1D8C123F467C300E62904 /* Resources */,
+				85E1D8FA23F475BA00E62904 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = epam_star_wars;
+			productName = epam_star_wars;
+			productReference = 85E1D8C323F467C300E62904 /* epam_star_wars.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85E1D8D823F467C400E62904 /* epam_star_warsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E1D8F023F467C400E62904 /* Build configuration list for PBXNativeTarget "epam_star_warsTests" */;
+			buildPhases = (
+				85E1D8D523F467C400E62904 /* Sources */,
+				85E1D8D623F467C400E62904 /* Frameworks */,
+				85E1D8D723F467C400E62904 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85E1D8DB23F467C400E62904 /* PBXTargetDependency */,
+			);
+			name = epam_star_warsTests;
+			productName = epam_star_warsTests;
+			productReference = 85E1D8D923F467C400E62904 /* epam_star_warsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		85E1D8E323F467C400E62904 /* epam_star_warsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E1D8F323F467C400E62904 /* Build configuration list for PBXNativeTarget "epam_star_warsUITests" */;
+			buildPhases = (
+				85E1D8E023F467C400E62904 /* Sources */,
+				85E1D8E123F467C400E62904 /* Frameworks */,
+				85E1D8E223F467C400E62904 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85E1D8E623F467C400E62904 /* PBXTargetDependency */,
+			);
+			name = epam_star_warsUITests;
+			productName = epam_star_warsUITests;
+			productReference = 85E1D8E423F467C400E62904 /* epam_star_warsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85E1D8BB23F467C300E62904 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Nickolay Truhin";
+				TargetAttributes = {
+					85E1D8C223F467C300E62904 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					85E1D8D823F467C400E62904 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 85E1D8C223F467C300E62904;
+					};
+					85E1D8E323F467C400E62904 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 85E1D8C223F467C300E62904;
+					};
+				};
+			};
+			buildConfigurationList = 85E1D8BE23F467C300E62904 /* Build configuration list for PBXProject "epam_star_wars" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85E1D8BA23F467C300E62904;
+			productRefGroup = 85E1D8C423F467C300E62904 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85E1D8C223F467C300E62904 /* epam_star_wars */,
+				85E1D8D823F467C400E62904 /* epam_star_warsTests */,
+				85E1D8E323F467C400E62904 /* epam_star_warsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85E1D8C123F467C300E62904 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E1D8D323F467C400E62904 /* LaunchScreen.storyboard in Resources */,
+				85E1D8D023F467C400E62904 /* Assets.xcassets in Resources */,
+				85E1D8CE23F467C300E62904 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E1D8D723F467C400E62904 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E1D8E223F467C400E62904 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85E1D8BF23F467C300E62904 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E1D8CB23F467C300E62904 /* HomeController.swift in Sources */,
+				85E1D8FC23F47C8E00E62904 /* TableViewCell.swift in Sources */,
+				85E1D8C723F467C300E62904 /* AppDelegate.swift in Sources */,
+				85E1D8C923F467C300E62904 /* SceneDelegate.swift in Sources */,
+				85E1D90123F4908F00E62904 /* Models.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E1D8D523F467C400E62904 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E1D8DE23F467C400E62904 /* epam_star_warsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85E1D8E023F467C400E62904 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E1D8E923F467C400E62904 /* epam_star_warsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85E1D8DB23F467C400E62904 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85E1D8C223F467C300E62904 /* epam_star_wars */;
+			targetProxy = 85E1D8DA23F467C400E62904 /* PBXContainerItemProxy */;
+		};
+		85E1D8E623F467C400E62904 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85E1D8C223F467C300E62904 /* epam_star_wars */;
+			targetProxy = 85E1D8E523F467C400E62904 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85E1D8CC23F467C300E62904 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E1D8CD23F467C300E62904 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85E1D8D123F467C400E62904 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E1D8D223F467C400E62904 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85E1D8EB23F467C400E62904 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		85E1D8EC23F467C400E62904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85E1D8EE23F467C400E62904 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 99C2LB4W93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = epam_star_wars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.coolone.epam-star-wars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85E1D8EF23F467C400E62904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 99C2LB4W93;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = epam_star_wars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.coolone.epam-star-wars";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		85E1D8F123F467C400E62904 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99C2LB4W93;
+				INFOPLIST_FILE = epam_star_warsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.coolone.epam-star-warsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/epam_star_wars.app/epam_star_wars";
+			};
+			name = Debug;
+		};
+		85E1D8F223F467C400E62904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99C2LB4W93;
+				INFOPLIST_FILE = epam_star_warsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.coolone.epam-star-warsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/epam_star_wars.app/epam_star_wars";
+			};
+			name = Release;
+		};
+		85E1D8F423F467C400E62904 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99C2LB4W93;
+				INFOPLIST_FILE = epam_star_warsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.coolone.epam-star-warsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = epam_star_wars;
+			};
+			name = Debug;
+		};
+		85E1D8F523F467C400E62904 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99C2LB4W93;
+				INFOPLIST_FILE = epam_star_warsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.coolone.epam-star-warsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = epam_star_wars;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85E1D8BE23F467C300E62904 /* Build configuration list for PBXProject "epam_star_wars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E1D8EB23F467C400E62904 /* Debug */,
+				85E1D8EC23F467C400E62904 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E1D8ED23F467C400E62904 /* Build configuration list for PBXNativeTarget "epam_star_wars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E1D8EE23F467C400E62904 /* Debug */,
+				85E1D8EF23F467C400E62904 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E1D8F023F467C400E62904 /* Build configuration list for PBXNativeTarget "epam_star_warsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E1D8F123F467C400E62904 /* Debug */,
+				85E1D8F223F467C400E62904 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E1D8F323F467C400E62904 /* Build configuration list for PBXNativeTarget "epam_star_warsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E1D8F423F467C400E62904 /* Debug */,
+				85E1D8F523F467C400E62904 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85E1D8BB23F467C300E62904 /* Project object */;
+}

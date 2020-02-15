@@ -27,8 +27,6 @@ class PeopleController: UITableViewController {
         super.viewDidLoad()
         
         if let model = startModel {
-            Prefs.recents.insert(model, at: 0)
-            
             title = model.name
         }
     }

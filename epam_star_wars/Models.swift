@@ -21,7 +21,7 @@ class PeopleResponse: Mappable {
     }
 }
 
-class People: Mappable, Codable {
+class People: Hashable, Mappable, Codable {
     var name: String?
     var height: String?
     var mass: String?
@@ -42,5 +42,13 @@ class People: Mappable, Codable {
         gender <- map["gender"]
         hairColor <- map["hair_color"]
         skinColor <- map["skin_color"]
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+         hasher.combine(ObjectIdentifier(self).hashValue)
+    }
+    
+    static func == (lhs: People, rhs: People) -> Bool {
+        return lhs.name == rhs.name
     }
 }

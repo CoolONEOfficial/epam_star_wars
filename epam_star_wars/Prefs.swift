@@ -9,13 +9,13 @@
 import Foundation
 
 class Prefs {
-    static private var _recents: [People]?
+    static private var _recents: Set<People>?
     
-    static var recents: [People] {
+    static var recents: Set<People> {
         get {
             if _recents == nil {
                 if let data = UserDefaults.standard.value(forKey:"recents") as? Data {
-                    _recents = try! PropertyListDecoder().decode(Array<People>.self, from: data)
+                    _recents = Set(try! PropertyListDecoder().decode(Array<People>.self, from: data))
                 } else {
                     _recents = []
                 }

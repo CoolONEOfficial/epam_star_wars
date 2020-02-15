@@ -28,23 +28,13 @@ class HomeController: UITableViewController {
         }
     }
     
-    var _data: [People]?
-    
-    var data : [People] {
-        get {
-            return _data!
-        }
-        
-        set {
-            _data = newValue
-            self.tableView.reloadData()
-        }
-    }
+    var data = [People]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data = Prefs.recents
+        data = Array(Prefs.recents)
+        tableView.reloadData()
         
         searchBar.delegate = self
     }
@@ -67,7 +57,37 @@ class HomeController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "infoSegue", sender: data[indexPath.row])
+        let model = data[indexPath.row]
+        if !(searchBar.text?.isEmpty ?? true) {
+            Prefs.recents.insert(model)
+        }
+        performSegue(withIdentifier: "infoSegue", sender: model)
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        guard searchBar.text?.isEmpty ?? true else {
+            return UISwipeActionsConfiguration(actions: [])
+        }
+        let deleteAction = UIContextualAction(
+            style: .destructive,
+            title:  "Delete",
+            handler: { (ac: UIContextualAction, view :UIView, success: (Bool) -> Void) in
+                Prefs.recents.remove(self.data[indexPath.row])
+                self.data.remove(at: indexPath.row)
+                self.tableView.beginUpdates()
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                self.tableView.endUpdates()
+                success(true)
+        })
+        deleteAction.backgroundColor = .red
+
+        return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,7 +110,8 @@ extension HomeController: UISearchBarDelegate {
             print("nothing to search")
             request = nil
             self.searchBar.isLoading = false
-            self.data = Prefs.recents
+            self.data = Array(Prefs.recents)
+            self.tableView.reloadData()
             return
         }
         
@@ -103,6 +124,7 @@ extension HomeController: UISearchBarDelegate {
                     self.data.removeAll()
                     if let results = peopleResponse.results {
                         self.data = results
+                        self.tableView.reloadData()
                     }
                 case .failure(let error):
                     let alert = UIAlertController(title: "Error!", message: error.localizedDescription, preferredStyle: .alert)
